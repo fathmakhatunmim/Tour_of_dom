@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1{
+            color: aqua;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>this is my header no banner</h1>
+    </header>
+    <main>
+        <h1>Welcome to my dom</h1>
+        <ul>
+            <li>shaFayat</li>
+            <li>bono bash</li>
+            <li>jalaLiset</li>
+        </ul>
+    </main>
+    <script>
+        // console.log("hello java script");
+        const student ={
+            name: 'abul mia',
+            id:121,
+            study : function(){
+                consol.log("studying");
+            }
+        }
+          const liCollection = document.getElementsByTagName('li');
+          console.log(liCollection);
+          for(const li of liCollection){
+            console.log(li.innerText);
+          }
+          //all h1 tags
+
+          const allHeadings = document.getElementsByTagName('h1');
+          for(const heading of allHeadings){
+            console.log(heading.innerText);
+          }
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
