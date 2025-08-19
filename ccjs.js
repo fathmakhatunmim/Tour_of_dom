@@ -11,3 +11,15 @@ for(const section of sections){
 
 
 }
+
+//create element and set innertext or innerhtml
+const newChild = document.createElement('li');
+newChild.innerText = 'new bord footbollar here';
+
+//find the parent where you will add the child
+
+const playersList = document.getElementById('player-list');
+
+//append the child to the parent
+playersList.appendChild(newChild);
+
