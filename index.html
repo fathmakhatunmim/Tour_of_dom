@@ -9,6 +9,10 @@
         h1{
             color: aqua;
 
+
+        }
+        #food-title{
+            color: green;
         }
     </style>
 </head>
@@ -17,12 +21,28 @@
         <h1>this is my header no banner</h1>
     </header>
     <main>
-        <h1>Welcome to my dom</h1>
+        <section id="old-dhaka" class="songs">
+             <h1>Welcome to my dom</h1>
+             <p>Lorem ipsum dolor<span>oli goli</span> sit amet, consectetur adipisicing elit.<span>Alias</span>,temporibus </p>
         <ul>
             <li>shaFayat</li>
             <li>bono bash</li>
-            <li>jalaLiset</li>
+            <li id="band">jalaLiset</li>
         </ul>
+        </section>
+        <section>
+            <h1 id="food-title">Foods i love</h1>
+            <ul>
+                <li>rice</li>
+                <li>potato</li>
+                <li>fish</li>
+                <li class="foreign">lentils</li>
+                <li  class="foreign">burger</li>
+                <li class="foreign">pizza</li>
+                <li class="foreign">pasta</li>
+            </ul>
+        </section>
+       
     </main>
     <script>
         // console.log("hello java script");
@@ -36,14 +56,37 @@
           const liCollection = document.getElementsByTagName('li');
           console.log(liCollection);
           for(const li of liCollection){
-            console.log(li.innerText);
+            // console.log(li.innerText);
           }
           //all h1 tags
 
           const allHeadings = document.getElementsByTagName('h1');
           for(const heading of allHeadings){
-            console.log(heading.innerText);
+            // console.log(heading.innerText);
           }
+
+             // get by id
+             const FoodTitleH1 = document.getElementById("food-title");
+             console.log(FoodTitleH1.innerText);
+             FoodTitleH1.innerText = 'foods i love to eat'
+
+
+             const bandElement = document.getElementById('band');
+            bandElement.innerText = 'jalali sleeping band'
+           
+            //get by classname
+            const foreignElement = document.getElementsByClassName("foreign");
+            console.log(foreignElement);
+            for(const element of foreignElement){
+                console.log(element);
+            }
+            // frameElement.innerText = "i love ....";
+
+            //query selector all
+            const spanElements = document.querySelectorAll('#old-dhaka p span')
+
+
+
     </script>
     <script src="main.js"></script>
 </body>
